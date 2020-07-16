@@ -19,7 +19,7 @@
         <li>
           <h2>会议1</h2>
           <div>
-            <span>组织者1</span>
+            <span>组织者2 </span>
             <span>,2020-10-10</span>
           </div>
         </li>
@@ -29,10 +29,13 @@
 </template>
 
 <script>
+import pdata from "../assets/json/platform.json";
+
 export default {
   name: "HelloWorld",
   props: {
     msg: String,
+    ddd: String,
   },
 };
 </script>
@@ -76,11 +79,13 @@ ul {
   border: 1px solid;
   text-align: left;
   font-size: 20px;
+  border-radius: 5px;
 }
 ul li {
   padding: 15px;
   border: 1px solid;
   cursor: pointer;
+  border-radius: 3px;
 }
 ul li:hover {
   background: #d3d3d375;
