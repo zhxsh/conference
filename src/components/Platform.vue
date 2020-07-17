@@ -4,18 +4,20 @@
       <h1>Event Booking Platform</h1>
       <!-- <button>Login</button> -->
       <div style="line-height:100px">
-        <el-button>Login</el-button>
+        <router-link to="/login"> <el-button>Login</el-button></router-link>
       </div>
     </div>
     <div class="content">
       <ul>
-        <li>
-          <h2>会议1</h2>
-          <div>
-            <span>组织者1</span>
-            <span>,2020-10-10</span>
-          </div>
-        </li>
+        <router-link to="/agenda">
+          <li>
+            <h2>会议1</h2>
+            <div>
+              <span>组织者1</span>
+              <span>,2020-10-10</span>
+            </div>
+          </li>
+        </router-link>
         <li>
           <h2>会议1</h2>
           <div>

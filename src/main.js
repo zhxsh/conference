@@ -13,13 +13,17 @@ Vue.config.productionTip = false;
 Vue.use(VueRouter);
 Vue.use(ElementUI);
 
+window.config = {
+  ttt: 234234,
+};
+
 // const routes = {
 //   "/": Agenda,
 //   "/login": Login,
 // };
 const routes = [
   { path: "/", component: Platform },
-  { path: "/genda", component: Agenda },
+  { path: "/agenda", component: Agenda },
   { path: "/login", component: Login },
 ];
 
