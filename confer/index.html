@@ -139,27 +139,29 @@
                 return window.data
             },
             template: `
-            <div class="main">
-    <div class="head">
-      <h1>Event Booking Platform</h1>
-      <!-- <button>Login</button> -->
-      <div style="line-height:100px">
-        <a href='agenda.html'><el-button>Login</el-button></a>
-      </div>
-    </div>
-    <div class="content">
-      <ul>
-        <li v-for="item in events" :key="item.id">
-          <h2>{{ item.name }}</h2>
-          <div>
-            <span>{{ item.organizer }}</span>
-            <span>,{{ item.time }}</span>
-          </div>
-        </li>
-      </ul>
-    </div>
-  </div>
-            `,
+                <div class="main">
+                    <div class="head">
+                    <h1>Event Booking Platform</h1>
+                    <!-- <button>Login</button> -->
+                    <div style="line-height:100px">
+                        <a href='agenda.html'><el-button>Login</el-button></a>
+                    </div>
+                    </div>
+                    <div class="content">
+                    <ul>
+                        <li v-for="item in events" :key="item.id">
+                            <a v-bind:href="'agenda.html?event=' + item.name" style='text-decoration: none'>
+                                <h2>{{ item.name }}</h2>
+                                <div>
+                                    <span>{{ item.organizer }}</span>
+                                    <span>,{{ item.time }}</span>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                    </div>
+                </div>
+                `,
         }).$mount("#app");
 
     </script>

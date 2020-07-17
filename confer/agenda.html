@@ -93,13 +93,17 @@
             name: 'jjjjjjj'
         }
         console.log(window.data);
+        let search = location.search;
+        let params = decodeURI(search.slice(search.lastIndexOf('=')+1, search.length));
+
+        console.log('zxs',params,location);
 
         new Vue({
             // router,
             // render: (h) => h(App),
             // template: "<div>你好</div>",
             data: () => {
-                return window.data
+                return window.data.agenda
             },
             methods: {
                 objectSpanMethod({ row, column, rowIndex, columnIndex }) {
@@ -122,11 +126,10 @@
             <div class="main">
                 <div class="head">
                 <h1>WorldSkills Conference 2019</h1>
-                <!-- <button>Login</button> -->
                 <div style="line-height:100px">
-                    <router-link to="/login">
+                    
                     <el-button>Redister for this event</el-button>
-                    </router-link>
+                    
                 </div>
                 </div>
                 <div class="content">

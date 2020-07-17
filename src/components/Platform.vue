@@ -4,7 +4,9 @@
       <h1>Event Booking Platform</h1>
       <!-- <button>Login</button> -->
       <div style="line-height:100px">
-        <router-link to="/login"> <el-button>Login</el-button></router-link>
+        <router-link to="/login">
+          <button>Login</button>
+        </router-link>
       </div>
     </div>
     <div class="content">
@@ -21,7 +23,7 @@
         <li>
           <h2>会议1</h2>
           <div>
-            <span>组织者2 </span>
+            <span>组织者2</span>
             <span>,2020-10-10</span>
           </div>
         </li>
@@ -37,8 +39,8 @@ export default {
   name: "HelloWorld",
   props: {
     msg: String,
-    ddd: String,
-  },
+    ddd: String
+  }
 };
 </script>
 
@@ -68,9 +70,6 @@ export default {
   flex: 1;
 }
 
-h3 {
-  margin: 40px 0 0;
-}
 ul {
   list-style-type: none;
   padding: 0;
@@ -99,5 +98,15 @@ h2 {
   font-size: 30px;
   margin: 0;
   line-height: 40px;
+}
+
+button {
+  /* width: 100px; */
+  padding: 0 20px;
+  height: 30px;
+  border-radius: 4px;
+  border: 0;
+  border: 1px solid #dcdfe6;
+  cursor: pointer;
 }
 </style>
